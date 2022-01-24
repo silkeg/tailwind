@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-r from-violet-500 to-fuchsia-500;
+    /* @apply bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 
+        hover:to-yellow-500 */
+    /* @apply bg-gradient-to-r from-blue-500 to-green-400 */
+  }
+  .container {
+    @apply mx-auto my-20 text-pink-300 shadow-lg rounded-md px-5 
+        py-[120px] border-b-2 bg-fuchsia-500/50;
+    background-color: rgba(195, 0, 213, 0.3);
+    border-color: rgba(0, 62, 196, 0.1);
+  }
+  h2 {
+    @apply text-pink-200 sm:text-center text-5xl mb-10 px-5;
+  }
+  b {
+    @apply hover:hover:underline bg-violet-600;
+  }
+}
+
+@layer components {
+  .menue-button {
+    @apply bg-violet-600 hover:bg-blue-400 rounded-full ml-10 p-5;
+  }
+}
+
+.menue-button-new {
+  @apply border-b-2 border-fuchsia-800 hover:bg-blue-200 bg-pink-500 
+    rounded-full p-5 ml-10 text-fuchsia-800;
+}
+
+.menue a {
+  @apply hover:bg-fuchsia-100 hover:text-fuchsia-700 text-violet-500 
+    rounded-md py-1 px-2 transition duration-300;
+}
+
+.image {
+  background: linear-gradient(rgba(195, 0, 213, 0.3), rgba(0, 62, 196, 0)),
+    url("../src/image.jpg") no-repeat center center fixed;
+  /* background: url("../src/image.jpg") no-repeat center center fixed; */
+  background-size: cover;
+}

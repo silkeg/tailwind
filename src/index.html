@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <link href="../dist/style.css" rel="stylesheet">
+</head>
+<body class="bg-red-500">
+    <span id="top"></span>
+    <nav class="bg-white drop-shadow-xl mb-20 p-5 fixed top-0 left-0 right-0 z-10">
+        <div class="flex justify-between max-w-3xl mx-auto">
+            <a href="#top" class="font-bold text-fuchsia-500 text-2xl uppercase">Tailwind</a>
+            <ul class="hidden sm:flex space-x-1 items-center menue mt-1">
+                <li>
+                    <a href="#flexbox">Flexbox</a>
+                </li>
+                <li>
+                    <a href="#grid">Grid</a>
+                </li>
+                <li>
+                    <a href="#responsive">Responsive</a>
+                </li>
+                <li>
+                    <a href="#specials">Specials</a>
+                </li>
+                <li>
+                    <a href="#font">Font-Styles</a>
+                </li>
+                <li>
+                    <a href="#class">Eigene Class</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="image h-screen xl:container">
+        <div class="max-w-3xl mx-auto relative top-[60%]">
+            <a href="https://tailwindcss.com/docs/installation" target="_blank">
+                <h1 class="text-5xl rounded-lg text-pink-200 tracking-wider shadow-2xl border-[3px] py-5 px-8 inline-block bg-gradient-to-r from-gray-900 to-transparent hover:from-cyan-600 hover:to-blue-900 ">
+                    tailwindcss.com<br>
+                    <span class="opacity-75 text-2xl tracking-normal text-pink-100">
+                        Die Suche!
+                    </span>
+                </h1>
+            </a>
+        </div>
+    </div>
+
+    <div class="container" id="flexbox">
+        <h2>
+            Flexbox
+        </h2>
+        <p class="mb-20 text-center">
+            justify-start, justify-end, justify-center, justify-between, justify-around, justify-evenly<br>
+            items-center<br>
+        </p>
+        <div class="sm:flex justify-evenly">              
+            <div class="sm:w-2/5 mb-10 sm:mb-0 bg-white rounded-3xl overflow-hidden drop-shadow-xl">
+                <p class="h-40 text-right ml-10 mr-5 pr-5 pl-10 pt-10 bg-pink-500 text-white text-opacity-60 whitespace-nowrap">
+                    text-opacity-60<br>
+                    whitespace-nowrap
+                </p>
+                <div class="bg-gray-100 h-[200px] py-10 mt-10">
+                    <div class="flex flex-col bg-violet-700 text-white text-center">
+                        <div class="h-30 bg-pink-500 w-1/4 py-5">
+                            1
+                        </div>
+                        <div class="h-30 bg-purple-200 w-1/4 px-5">
+                            2
+                        </div>
+                        <div class="h-30 bg-cyan-400 w-1/4">
+                            3
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sm:w-2/5 bg-white rounded-3xl overflow-hidden drop-shadow-xl">
+                <p class="w-3/5 h-[175px] pt-5 mt-[-12px] mx-auto text-center bg-pink-800 p-3 text-red-200 text-xl uppercase whitespace-nowrap">
+                    w-3/5<br>
+                    uppercase<br>
+                    mx-auto<br>
+                    text-center<br>
+                    text-xl
+                </p>
+                <div class="bg-gray-100 h-[200px] py-10 mt-10 text-white">
+                    <div class="flex mt-[90px] bg-violet-700 text-center">
+                        <div class="order-2 flex-initial h-30 bg-pink-500 w-1/4">
+                            1
+                        </div>
+                        <div class="order-1 flex-none h-30 bg-purple-200 w-1/5">
+                            2
+                        </div>
+                        <div class="order-4 flex-auto h-30 bg-cyan-400 w-1/5">
+                            3
+                        </div>
+                        <div class="order-3 flex-1 h-30 bg-red-200">
+                            4
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="container" id="grid">
+        <h2>
+            Grid
+        </h2>
+        <p class="mb-20 text-center">
+            drop-shadow-[0_8px_8px_rgba(0,0,0,0.25)]<br>
+            shadow-lg shadow-red-800/50<br>
+            drop-shadow-xl
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 md:gap-5"> 
+            <div class="p-1 pb-9 mb-10 sm:mb-0 bg-white rounded-lg overflow-hidden shadow-lg shadow-red-800/50">
+                <div class="grid grid-cols-3 gap-x-2 gap-y-8 bg-violet-700 p-3 rounded-md text-center text-white">
+                    <div class="col-span-2 h-30 bg-pink-500">
+                        1
+                    </div>
+                    <div class="h-30 bg-purple-200">
+                        2
+                    </div>
+                    <div class="h-30 bg-cyan-400">
+                        3
+                    </div>
+                    <div class="h-30 bg-red-200">
+                        4
+                    </div>
+                </div>
+                <p class="w-3/4 text-center bg-gray-100 italic mt-20 mt-10 py-5 mx-auto border-8 border-white drop-shadow-[0_8px_8px_rgba(0,0,0,0.25)] rounded-md">
+                    grid grid-cols-3<br> gap-x-2 gap-y-8<br><br>
+                    -> col-span-2
+                </p>
+            </div>
+            <div class="p-1 pb-9 mb-10 sm:mb-0 bg-white rounded-lg overflow-hidden shadow-lg shadow-red-800/50">
+                <div class="grid grid-rows-2 grid-flow-col gap-x-2 bg-violet-700 p-3 rounded-md text-center text-white">
+                    <div class="row-span-2 h-30 bg-pink-500 border-t-4 border-pink-800">
+                        1
+                    </div>
+                    <div class="h-30 bg-purple-200">
+                        2
+                    </div>
+                    <div class="h-30 bg-cyan-400">
+                        3
+                    </div>
+                    <div class="row-span-2 h-30 bg-red-200 rounded-full text-center">
+                        4
+                    </div>
+                </div>
+                <p class="w-3/4 h-40 mt-20 mx-auto text-center bg-gray-100 font-bold text-blue-200 pt-5 border-4 border-b-0 border-blue-200 border-opacity-50 border-dashed shadow-md shadow-red-800/50 rounded-md">
+                    grid grid-rows-2 <br>grid-flow-col <br>gap-x-2
+                </p>
+            </div>
+            <div class="p-1 pb-9 bg-white rounded-lg overflow-hidden shadow-lg shadow-red-800/50">
+                <div class="grid grid-rows-2 grid-flow-col bg-violet-700 p-3 rounded-md gap-x-2 justify-items-stretch text-center text-white">
+                    <div class="row-span-2 h-30 bg-pink-500">
+                        <button class="bg-pink-800 p-1 rounded mt-2 drop-shadow-2xl hover:bg-blue-700 hover:text-white">Click</button>
+                    </div>
+                    <div class="h-30 w-4 bg-purple-200 w-1/5">
+                        2
+                    </div>
+                    <div class="h-30  w-4 bg-cyan-400 w-1/5">
+                        3
+                    </div>
+                    <div class="row-span-2 h-30 bg-red-200 rounded-t-3xl mr-10 mt-1">
+                        4
+                    </div>
+                </div>
+                <p class="w-3/4 text-right bg-white mx-10 p-5 text-xl font-thin drop-shadow-xl rounded-md"">
+                    grid <br>grid-rows-2 <br>grid-flow-col gap-x-2 justify-items-stretch<br><br>
+                    -> row-span-2
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center" id="responsive">
+        <h2>
+            Responsive
+        </h2>
+        <p class="mb-20">
+            sm md lg xl 2xl
+        </p>
+        <p class="text-3xl mb-10 2xl:text-red-100 xl:text-red-300 lg:text-green-300 sm:text-blue-300 text-white md:text-blue-300">
+            text-white <br> 
+            sm:text-blue-300<br> 
+            md:text-blue-300<br> 
+            lg:text-green-300 <br> 
+            xl:text-red-600 <br> 
+            2xl:text-red-300 <br> 
+        </p>
+        <div class="inline-block h-6 w-3/4 sm:w-1/2 bg-white sm:bg-blue-100 lg:bg-violet-500 text-pink-500 lg:text-white rounded">
+            bg-white sm:bg-blue-100 lg:bg-violet-500
+        </div>
+    </div>
+
+    <div class="container" id="specials">
+        <h2>
+            Specials
+        </h2>
+        <p class="mb-20 text-center">
+            image: h-screen xl:container
+        </p>
+        <p class="w-1/3 sm:mx-auto lg:mx-0 bg-white mb-10 rounded p-2">
+            sm:mx-auto lg:mx-0
+        </p>
+        <p class="w-2/3 bg-white mb-10 rounded p-2">
+            w-2/3
+        </p>
+        <p class="max-w-2xl xl:max-w-xl bg-white mb-10 rounded p-2">
+            max-w-2xl xl:max-w-xl
+        </p>
+        <p class="w-full bg-white rounded mb-10 p-2">
+            w-full
+        </p>
+        <p class="bg-white rounded mb-10 p-2 border-2 border-dashed  border-violet-700">
+            border-0, border-4, border-t-4, border-pink-700,<br> border-transparent, border-opacity-50,<br> border-dashed, border-dotted, border-double
+        </p>
+        <p class="bg-white rounded-full mb-10 p-2 border-2 border-dotted  border-violet-700">
+            rounded-sm, rounded-full, rounded-md, rounded-t-3xl, rounded-l-3xl, rounded-r-3xl
+        </p>
+        <p class="bg-white rounded-full mb-10 p-2 shadow-inner shadow-pink-500/50 drop-shadow-lg">
+            shadow-inner drop-shadow-2xl shadow-lg shadow-pink-500/50
+        </p>
+        <p class="bg-violet-600/50 mb-10 p-2 rounded">
+            Changing the opacity: <br>
+            bg-violet-500/75 bg-violet-500/50 bg-violet-500/[.06]<br>
+            opacity-25 (text wird auch to-transparent)
+        </p>
+        <p class="group text-red-300 hover:cursor-pointer space-y-1 transition duration-300 mb-10 p-2 pl-10">
+            Grouphover<br>
+            <span class="group-hover:text-white mr-3 border-b-2 border-dotted border-transparent hover:border-red-200 inline-block">
+                Child1: transition duration-300
+            </span>
+            <span>
+                Child1
+            </span>
+        </p>
+        <ul class="space-y-2 divide-y divide-pink-500 mb-10 inline-block pl-10">
+            <li class="px-1 hover:bg-fuchsia-500 cursor-pointer">
+                space-y-2 divide-y divide-pink-500
+            </li>
+            <li class="px-1 hover:bg-fuchsia-500 cursor-pointer">
+                space-y-2 divide-y divide-pink-500
+            </li>
+            <li class="px-1 hover:bg-fuchsia-500 cursor-pointer">
+                space-y-2 divide-y divide-pink-500
+            </li>
+        </ul><br>
+
+        <button class="bg-blue-200 py-1 px-5 rounded mt-2 drop-shadow-2xl hover:bg-violet-700 hover:text-white focus:bg-pink-200  focus:text-pink-500 text-fuchsia-500">hover:bg-violet-700 focus:bg-pink-200</button><br><br>
+
+        input: 
+        <input type="text" class="mb-10 block py-3 px-5 rounded w-full md:w-2/3 active:bg-violet-600 focus:outline-none focus:bg-pink-200" placeholder="focus:outline-none active:bg-violet-600 focus:bg-pink-200">
+        textarea: <br>
+        <textarea class="h-24 no-resize resize-none appearance-none block py-3 px-5 rounded active:bg-violet-600 w-full md:w-2/3 focus:outline-none">no-resize resize-none appearance-none
+        </textarea>
+    </div>
+
+    <div class="container" id="font">
+        <h2>
+            Font-Styles
+        </h2>
+        <p class="mb-20 text-center">
+            xs sm md lg xl 2xl
+        </p>
+        <p class="mb-10 text-white">
+            text-transparent, text-white, text-pink-500
+        </p>
+        <p class="mb-10 font-thin">
+            font-extralight, font-light, font-thin,<br> 
+            font-normal, font-medium,<br>
+            font-bold, font-semibold, font-extrabold
+        </p>
+        <p class="tracking-widest mb-10">
+            LetterSpacing: tracking-tight, tracking-wider 
+        </p>
+        <div class="sm:flex gap-x-5">
+            <p class="sm:w-1/2 sm:h-48 rounded text-right mb-10 p-10 bg-violet-600 text-white text-opacity-50">
+                text-opacity-50: von 0 bis 100
+            </p>
+            <p class="sm:w-1/2 sm:h-48 rounded text-center p-10 bg-fuchsia-500 text-red-200 text-xl uppercase">
+                uppercase <br> lowercase <br> capitalize <br> normal-case
+            </p>
+        </div>
+    </div>
+
+    <div class="container" id="class">
+        <h2>
+            Eigene Class definieren
+        </h2>
+        <p class="mb-20 text-center">
+            in der style.css
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-24">
+            <div class="border-b border-pink-300 border-dotted min-h-min pb-20">
+                <strong class="text-xl text-pink-400">Base</strong> Class erweitern<br><br> 
+                <b>
+                    @layer base {<br>
+                        b {<br>
+                            @apply hover:bg-red-200 hover:underline bg-red-400;<br>
+                        }
+                    }<br>
+                </b>
+            </div>
+            <div class="border-b border-pink-300 border-dotted min-h-min pb-20">
+                <strong class="text-xl text-pink-400">Komponent</strong> definieren<br><br>                
+                    @layer components {<br>
+                        .menue-button{<br>
+                            @apply hover:bg-blue-200 bg-blue-400 rounded-full;<br>
+                        }
+                    }<br><br><br>
+                <a href="" class="menue-button">Text</a>
+                <a href="" class="menue-button">Text</a>
+            </div>
+            <div>
+                <strong class="text-xl text-pink-400">Utility</strong> Class<br>
+                dh eigene Class definieren<br><br>                
+                    @layer utilities {<br>
+                        .menue-button{<br>
+                            .text-green-500 {<br>
+                                color: pink;<br>
+                            }
+                        }
+                    }
+            </div>
+            <div>
+                Wenn Parameter nicht vorhanden, kann man selbst definieren:<br><br> 
+                px-5 py-[120px]<br><br><br>
+                <strong class="text-xl text-pink-400">@apply</strong><br><br> 
+                .menue-button-new{<br>
+                    @apply hover:bg-blue-200 bg-blue-400 rounded-full;<br>
+                }<br><br><br> 
+                <a href="" class="menue-button-new">Text</a>
+                <a href="" class="menue-button-new">Text</a>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
