@@ -596,20 +596,8 @@ b:hover:hover {
   right: 0px;
 }
 
-.top-\[60\%\] {
-  top: 60%;
-}
-
 .top-\[66\%\] {
   top: 66%;
-}
-
-.left-5 {
-  left: 1.25rem;
-}
-
-.left-8 {
-  left: 2rem;
 }
 
 .z-10 {
@@ -654,6 +642,10 @@ b:hover:hover {
   margin-top: 0.25rem;
 }
 
+.ml-\[70px\] {
+  margin-left: 70px;
+}
+
 .mb-20 {
   margin-bottom: 5rem;
 }
@@ -696,46 +688,6 @@ b:hover:hover {
 
 .mr-3 {
   margin-right: 0.75rem;
-}
-
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
-.ml-20 {
-  margin-left: 5rem;
-}
-
-.ml-40 {
-  margin-left: 10rem;
-}
-
-.ml-\[30px\] {
-  margin-left: 30px;
-}
-
-.ml-\[40px\] {
-  margin-left: 40px;
-}
-
-.ml-\[60px\] {
-  margin-left: 60px;
-}
-
-.ml-\[t0px\] {
-  margin-left: t0px;
-}
-
-.ml-\[80px\] {
-  margin-left: 80px;
-}
-
-.ml-\[75px\] {
-  margin-left: 75px;
-}
-
-.ml-\[70px\] {
-  margin-left: 70px;
 }
 
 .block {
@@ -1602,6 +1554,10 @@ b:hover:hover {
 @media (min-width: 768px) {
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
   }
 
   .md\:w-2\/3 {
