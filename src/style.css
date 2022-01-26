@@ -15,6 +15,9 @@
     background-color: rgba(195, 0, 213, 0.3);
     border-color: rgba(0, 62, 196, 0.1);
   }
+  .image.container {
+    margin-top: 0;
+  }
   h2 {
     @apply text-pink-200 sm:text-center text-5xl mb-10 px-5;
   }
