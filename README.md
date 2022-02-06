@@ -33,3 +33,9 @@ plugins: [],
 "test": "echo \"Error: no test specified\" && exit 1",
 "build": "tailwindcss -i ./src/style.css -o ./dist/style.css --watch"
 },
+
+http://hny.surge.sh/  
+npm install --save-dev surge (npm install --global surge)  
+"scripts":{  
+"surge-deploy": "surge -p dist -d s-tailwind.surge.sh" (-p=project -d=domain)  
+}
