@@ -16,7 +16,7 @@ https://levelup.gitconnected.com/setup-tailwind-css-with-webpack-3458be3eb547
 
 Ordnerstruktur:
 
-dist -> style.css + index.html
+dist -> style.css + index.html  
 src -> style.css
 
 npx tailwindcss init
