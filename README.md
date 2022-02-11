@@ -1,5 +1,7 @@
 # tailwind
 
+https://www.youtube.com/tailwindlabs
+
 Git clone repostitory
 
 npm init
