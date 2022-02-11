@@ -21,23 +21,28 @@ src -> style.css
 
 npx tailwindcss init
 
+```js
 module.exports = {
-content: [
-'./dist/*.{html,js}'
-],
-theme: {
-extend: {},
-},
-plugins: [],
-}
+  content: ["./dist/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
 
+```js
 "scripts": {
-"test": "echo \"Error: no test specified\" && exit 1",
-"build": "tailwindcss -i ./src/style.css -o ./dist/style.css --watch"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./src/style.css -o ./dist/style.css --watch"
 },
+```
 
 http://hny.surge.sh/  
-npm install --save-dev surge (npm install --global surge)  
-"scripts":{  
-"surge-deploy": "surge -p dist -d s-tailwind.surge.sh" (-p=project -d=domain)  
+npm install --save-dev surge (npm install --global surge)
+
+```js
+"scripts":{
+    "surge-deploy": "surge -p dist -d s-tailwind.surge.sh" (-p=project -d=domain)
 }
+```
