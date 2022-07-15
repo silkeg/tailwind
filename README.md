@@ -46,3 +46,5 @@ npm install --save-dev surge (npm install --global surge)
     "surge-deploy": "surge -p dist -d s-tailwind.surge.sh" (-p=project -d=domain)
 }
 ```
+
+https://s-tailwind.surge.sh/
