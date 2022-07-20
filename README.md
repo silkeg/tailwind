@@ -33,7 +33,6 @@ module.exports = {
 
 ```js
 "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tailwindcss -i ./src/style.css -o ./dist/style.css --watch"
 },
 ```
