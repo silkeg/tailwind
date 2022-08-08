@@ -37,7 +37,7 @@ module.exports = {
 },
 ```
 
-http://hny.surge.sh/  
+http://surge.sh/  
 npm install --save-dev surge (npm install --global surge)
 
 ```js
