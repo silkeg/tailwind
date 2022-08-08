@@ -36,8 +36,8 @@ module.exports = {
     "build": "tailwindcss -i ./src/style.css -o ./dist/style.css --watch"
 },
 ```
-
-http://surge.sh/  
+ 
+https://surge.sh/
 npm install --save-dev surge (npm install --global surge)
 
 ```js
